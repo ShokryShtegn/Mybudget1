@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RadioGroup
+        android:id="@+id/radioRelations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/radioRelations2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RadioButton
+            android:id="@+id/Father"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Father" />
+
+        <RadioButton
+            android:id="@+id/Mother"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mother" />
+
+        <RadioButton
+            android:id="@+id/child"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Child" />
+
+        <RadioButton
+            android:id="@+id/wife"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wife" />
+
+        <RadioButton
+            android:id="@+id/husband"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Husband" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="275dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginRight="66dp"
+        android:gravity="center_horizontal"
+        android:text="Choose The relation"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/radioRelations"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/emailRelation"
+        android:layout_width="279dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginLeft="59dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginRight="59dp"
+        android:layout_marginBottom="128dp"
+        android:ems="10"
+        android:hint="Enter the Email of your partner"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/saveRelation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioRelations2" />
+
+    <Button
+        android:id="@+id/saveRelation"
+        android:layout_width="70dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="225dp"
+        android:layout_marginLeft="225dp"
+        android:layout_marginBottom="184dp"
+        android:background="@color/white"
+        android:text="Save"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailRelation" />
+
+    <RadioGroup
+        android:id="@+id/radioRelations2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="129dp"
+        android:layout_marginLeft="129dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginRight="136dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/emailRelation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioRelations">
+
+        <RadioButton
+            android:id="@+id/sister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sister" />
+
+        <RadioButton
+            android:id="@+id/brother"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brother" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="70dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="184dp"
+        android:background="@color/white"
+        android:text="Cancel"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/saveRelation"
+        app:layout_constraintTop_toBottomOf="@+id/emailRelation" />
+</androidx.constraintlayout.widget.ConstraintLayout>

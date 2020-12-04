@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Item"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/itemsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="413dp"
+                android:layout_height="231dp"
+                android:stretchColumns="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/itemName"
+                        android:layout_width="179dp"
+                        android:layout_height="39dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Enter Item Name"
+                        android:inputType="textPersonName"
+                        app:layout_constraintBottom_toTopOf="@+id/availableAmount"
+                        app:layout_constraintEnd_toStartOf="@+id/descOfItem"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/descOfItem"
+                        android:layout_width="179dp"
+                        android:layout_height="39dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Description"
+                        android:inputType="text"
+                        app:layout_constraintBottom_toTopOf="@+id/price"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/itemName"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/availableAmount"
+                        android:layout_width="179dp"
+                        android:layout_height="39dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Available Amount"
+                        android:inputType="number"
+                        app:layout_constraintBottom_toTopOf="@+id/country"
+                        app:layout_constraintEnd_toStartOf="@+id/price"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/itemName" />
+
+                    <EditText
+                        android:id="@+id/price"
+                        android:layout_width="179dp"
+                        android:layout_height="39dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Price"
+                        android:inputType="number"
+                        app:layout_constraintBottom_toTopOf="@+id/status"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/availableAmount"
+                        app:layout_constraintTop_toBottomOf="@+id/descOfItem" />
+                </TableRow>
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/country"
+                        android:layout_width="179dp"
+                        android:layout_height="39dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Country"
+                        android:inputType="text"
+                        app:layout_constraintBottom_toTopOf="@+id/popup_window_view_with_border"
+                        app:layout_constraintEnd_toStartOf="@+id/status"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/availableAmount" />
+
+                    <EditText
+                        android:id="@+id/status"
+                        android:layout_width="179dp"
+                        android:layout_height="39dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Status"
+                        android:inputType="text"
+                        app:layout_constraintBottom_toTopOf="@+id/Age_window_view_with_border"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/country"
+                        app:layout_constraintTop_toBottomOf="@+id/price" />
+                </TableRow>
+
+                <TableRow>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/popup_window_view_with_border"
+                        android:layout_width="185dp"
+                        android:layout_height="39dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="3dp"
+                        app:cardElevation="0dp"
+                        app:cardMaxElevation="0dp"
+                        app:cardPreventCornerOverlap="false"
+                        app:layout_constraintEnd_toStartOf="@+id/Age_window_view_with_border"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/country">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/window_view"
+                            android:layout_width="185dp"
+                            android:layout_height="39dp"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="2dp"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="3dp"
+                            app:cardElevation="0dp"
+                            app:cardMaxElevation="0dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/window_background_container"
+                                android:layout_width="185dp"
+                                android:layout_height="39dp"
+                                android:layout_centerInParent="true"
+                                android:background="#FFFFFF"
+                                android:minHeight="44dp">
+
+                                <Spinner
+                                    android:id="@+id/category"
+                                    android:layout_width="185dp"
+                                    android:layout_height="39dp"
+                                    android:fontFamily="sans-serif-light"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_weight="1"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="MissingConstraints" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/Age_window_view_with_border"
+                        android:layout_width="188dp"
+                        android:layout_height="39dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="3dp"
+                        app:cardElevation="0dp"
+                        app:cardMaxElevation="0dp"
+                        app:cardPreventCornerOverlap="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/popup_window_view_with_border"
+                        app:layout_constraintTop_toBottomOf="@+id/status">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/window_Age_view"
+                            android:layout_width="188dp"
+                            android:layout_height="39dp"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="2dp"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="3dp"
+                            app:cardElevation="0dp"
+                            app:cardMaxElevation="0dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/window_Age_background_container"
+                                android:layout_width="188dp"
+                                android:layout_height="39dp"
+                                android:layout_centerInParent="true"
+                                android:background="#FFFFFF"
+                                android:minHeight="44dp">
+
+                                <Spinner
+                                    android:id="@+id/agePersons"
+                                    android:layout_width="188dp"
+                                    android:layout_height="39dp"
+                                    android:fontFamily="sans-serif-light"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_weight="1"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="MissingConstraints" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
+                </TableRow>
+            </TableLayout>
+
+            <Button
+                android:id="@+id/photo"
+                android:layout_width="257dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="59dp"
+                android:layout_marginLeft="59dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="59dp"
+                android:layout_marginRight="59dp"
+                android:background="#DCBF07"
+                android:text="Item image"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/selectImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="@+id/tableLayout"
+                app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+            <ImageView
+                android:id="@+id/selectImage"
+                android:layout_width="256dp"
+                android:layout_height="198dp"
+                android:layout_marginStart="59dp"
+                android:layout_marginLeft="59dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="59dp"
+                android:layout_marginRight="59dp"
+                android:layout_marginBottom="56dp"
+                android:background="@color/black"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/saveItem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.509"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/photo" />
+
+            <Button
+                android:id="@+id/saveItem"
+                android:layout_width="70dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="323dp"
+                android:layout_marginLeft="323dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/white"
+                android:text="Save"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selectImage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

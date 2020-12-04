@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mybudget">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Android Sync SQLite Database with Server -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACTION_OPEN_DOCUMENT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".RecordDetailActivity"></activity>
+        <activity android:name=".TransferMoney" />
+        <activity android:name=".Transaction" />
+        <activity android:name=".test" />
+        <activity android:name=".AddGoal" />
+        <activity android:name=".Goal" />
+        <activity android:name=".homeLight" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Home" />
+        <activity android:name=".Main" />
+        <activity android:name=".SearchForTransaction" />
+        <activity android:name=".CurrencyConverter" />
+        <activity android:name=".AdviceSystem" />
+        <activity android:name=".Map" />
+        <activity android:name=".Backup" />
+        <activity android:name=".SendEmailToResetPassword" />
+        <activity android:name=".ResetPassword" />
+        <activity android:name=".VerifyCode" />
+        <activity android:name=".fragment.AddTransaction" />
+        <activity android:name=".Wallet" />
+        <activity android:name=".AddWallet" />
+        <activity android:name=".WalletPopUp" />
+        <activity android:name=".WalletPopUpButtons" />
+        <activity android:name=".SignUpPopUp" />
+        <activity android:name=".SignUpPopUpChild" />
+        <activity
+            android:name=".SellerHomeLight"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddItem"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Profile"/>
+        <activity android:name=".Update"/>
+        <activity android:name=".ItemDetailActivity"/>
+        <activity android:name=".ProfileUser"/>
+        <activity android:name=".UpdateUser"/>
+        <activity android:name=".Relations"/>
+        <activity android:name=".ConfirmRequest"/>
+        <activity android:name=".Calculator"/>
+        <activity android:name=".CurrencyPicker"/>
+        <activity android:name=".WalletPicker"/>
+        <activity android:name=".AchieveGoalInfo"/>
+        <activity android:name=".Debt"/>
+        <activity android:name=".OngoingGoalInfo"/>
+        <activity android:name=".DebtInfo"/>
+        <activity android:name=".AddGoalTransactin"/>
+        <activity android:name=".AddDebt"/>
+        <activity android:name=".RequestsRelations"/>
+    </application>
+
+</manifest>

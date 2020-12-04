@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <FrameLayout
+        android:id="@+id/frame_transaction"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/btn_nav_transaction"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="610dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/colorPrimary"
+            app:itemTextColor="@color/black"
+            app:menu="@menu/transaction">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_save"
+            android:layout_width="63dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="350dp"
+            android:layout_marginLeft="350dp"
+            android:layout_marginTop="550dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="444dp"
+            android:contentDescription="@string/todo"
+            app:backgroundTint="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/btn_nav_transaction"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_input_add" />
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

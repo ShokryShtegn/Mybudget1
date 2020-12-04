@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ExpensesFragment"
+    android:background="#E4E6E8"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/trans_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transactions"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="?attr/colorPrimary"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            />
+
+
+        <Button
+            android:id="@+id/save_Expenses_Transaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:background="?attr/colorPrimary"
+            android:textColor="@color/black"
+            android:text="Save"
+            android:textSize="17dp"/>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="#E4E6E8">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_baseline_category_24"
+            android:ems="10"
+            android:hint="Paid For :"
+            android:textAlignment="textStart"
+            android:gravity="center"
+            tools:ignore="RtlCompat"
+            android:textColor="@color/black" />
+
+        <Spinner
+            android:id="@+id/spinner_Cat_Exp"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:textAlignment="textStart"
+            android:gravity="center"
+            tools:ignore="RtlCompat"/>
+
+        <ImageButton
+            android:id="@+id/photo_Expenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle"
+            android:src="@drawable/ic_baseline_photo_camera_24"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/amount_Expenses"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:drawableLeft="@drawable/ic_baseline_attach_money_24"
+        android:inputType="number"
+        android:hint="0.00"/>
+
+    <EditText
+        android:id="@+id/note_Expenses"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_event_note_24"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:scrollbars="vertical"
+        android:hint="Write Note"/>
+    <EditText
+        android:id="@+id/date_Expenses"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_date_range_24"
+        android:ems="10"
+        android:inputType="date"
+        android:hint="Date"
+        android:focusable="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="#E4E6E8"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_baseline_folder_open_24"
+            android:ems="10"
+            android:text="Wallet Name :"
+            android:textAlignment="textStart"
+            android:gravity="center"
+            tools:ignore="RtlCompat" />
+
+        <Spinner
+            android:id="@+id/spinner_Wallet_Exp"
+            android:layout_width="205dp"
+            android:layout_height="match_parent"
+            android:textAlignment="textStart"
+            android:gravity="center"
+            tools:ignore="RtlCompat" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

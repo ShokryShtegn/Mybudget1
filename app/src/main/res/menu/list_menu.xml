@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Search_For_Transaction"
+        android:title="Search For Transaction"
+        />
+    <item
+        android:id="@+id/Currency_Converter"
+        android:title="Currency Converter"
+        />
+    <item
+        android:id="@+id/Advice_System"
+        android:title="Advice System"
+        />
+    <item
+        android:id="@+id/Map"
+        android:title="Map"
+        />
+    <item
+        android:id="@+id/Backup"
+        android:title="Backup"
+        />
+
+</menu>

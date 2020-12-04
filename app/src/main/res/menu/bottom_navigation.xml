@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/account"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="Account"
+    />
+    <item
+        android:id="@+id/calender"
+        android:icon="@drawable/ic_baseline_calendar_today_24"
+        android:title="Calender"
+      />
+    <item
+        android:id="@+id/add"
+        android:icon="@drawable/ic_baseline_add_circle_24"
+        android:title="Add Transaction"
+       />
+    <item
+        android:id="@+id/charts"
+        android:icon="@drawable/ic_baseline_pie_chart_24"
+        android:title="Charts"
+        />
+    <item
+        android:id="@+id/transaction"
+        android:icon="@drawable/ic_baseline_post_add_24"
+        android:title="list"
+       />
+
+
+</menu>

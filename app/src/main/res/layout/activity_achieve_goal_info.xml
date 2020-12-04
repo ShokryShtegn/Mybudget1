@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AchieveGoalInfo">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="Goal"
+        tools:ignore="MissingConstraints" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:outlineSpotShadowColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/name_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:paddingBottom="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/namelayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:gravity="top"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_marginRight="0dp"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Name"
+                            android:textColor="@android:color/black"
+                            android:textSize="28sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/color_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:paddingBottom="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/color_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:gravity="top"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/saved"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/picture"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Saved"
+                            android:textColor="@color/GRAY"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:id="@+id/remain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="right"
+                            android:text="Remain"
+                            android:textColor="@color/GRAY"
+                            android:textSize="19sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/color_value_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/color_layout"
+                        android:layout_alignStart="@+id/color_layout"
+                        android:layout_alignLeft="@+id/color_layout"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="bottom"
+                        android:orientation="horizontal"
+                        android:text="Left"
+                        android:textSize="15sp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/saved_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Saved Value"
+                            android:textColor="@android:color/black"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:id="@+id/remain_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="right"
+                            android:text="Remain Value"
+                            android:textColor="@android:color/black"
+                            android:textSize="19sp" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/section3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:paddingBottom="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/progresslayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:gravity="top"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <androidx.core.widget.ContentLoadingProgressBar
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:id="@+id/progres_bar"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp">
+
+                        </androidx.core.widget.ContentLoadingProgressBar>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/section4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:paddingBottom="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/amount_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:gravity="top"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/picture"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Amount"
+                            android:textColor="@color/GRAY"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:id="@+id/amount_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="left"
+                            android:text="Amount Value"
+                            android:textColor="@android:color/black"
+                            android:textSize="19sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/target_date_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/amount_container"
+                        android:layout_alignStart="@+id/amount_container"
+                        android:layout_alignLeft="@+id/amount_container"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="bottom"
+                        android:orientation="horizontal"
+                        android:text="Left"
+                        android:textSize="15sp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/achieved_at"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Achieve At"
+                            android:textColor="@color/GRAY"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:id="@+id/target_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="left"
+                            android:text="Target Date"
+                            android:textColor="@android:color/black"
+                            android:textSize="19sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutName"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="16dp"
+            android:nestedScrollingEnabled="false"
+            app:fastScrollEnabled="false"
+            app:layout_constraintTop_toBottomOf="@+id/layoutName" />
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

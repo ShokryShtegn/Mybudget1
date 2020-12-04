@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="3dp"
+    app:cardBackgroundColor="@color/white"
+    android:layout_marginLeft="80dp"
+    android:layout_marginRight="80dp">
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:background="@color/black">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="2">
+
+                <TableLayout
+                    android:layout_width="20dp"
+                    android:layout_height="150dp"
+                    android:stretchColumns="2">
+                    <TableRow>
+                        <ImageView
+                            android:id="@+id/profileIv"
+                            android:layout_width="215dp"
+                            android:layout_height="139dp"
+                            android:src="@drawable/ic_item_white_image" />
+                        <ImageButton
+                            android:id="@+id/moreBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@null"
+                            android:src="@drawable/ic_item_white" />
+                    </TableRow>
+                </TableLayout>
+
+                <TableRow >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Name"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/itemName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Amount"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/itemAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Price"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/itemPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </TableRow>
+                <!--   <TableRow>
+                       <TextView
+                           android:text="Category"
+                           android:textSize="15sp"
+                           android:textColor="@color/black"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:textAlignment="center"
+                           android:gravity="center_horizontal" />
+                       <TextView
+                           android:id="@+id/itemCategory"
+                           android:textSize="15sp"
+                           android:textColor="@color/black"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="1"
+                           android:padding="5dp"
+                           android:layout_marginLeft="15dp"/>
+                   </TableRow>
+                   <TableRow>
+                       <TextView
+                           android:text="Description"
+                           android:textSize="15sp"
+                           android:textColor="@color/black"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:textAlignment="center"
+                           android:gravity="center_horizontal" />
+                       <TextView
+                           android:id="@+id/itemDesc"
+                           android:textSize="15sp"
+                           android:textColor="@color/black"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="1"
+                           android:padding="5dp"
+                           android:layout_marginLeft="15dp"/>
+                   </TableRow>
+                   <TableRow>
+                       <TextView
+                           android:text="Country"
+                           android:textSize="15sp"
+                           android:textColor="@color/black"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:textAlignment="center"
+                           android:gravity="center_horizontal" />
+                       <TextView
+                           android:id="@+id/itemCountry"
+                           android:textSize="15sp"
+                           android:textColor="@color/black"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="1"
+                           android:padding="5dp"
+                           android:layout_marginLeft="15dp"/>
+                   </TableRow>
+                   <TableRow>
+                       <TextView
+                           android:text="Status"
+                           android:textSize="15sp"
+                           android:textColor="@color/black"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:textAlignment="center"
+                           android:gravity="center_horizontal" />
+                       <TextView
+                           android:id="@+id/itemStatus"
+                           android:textSize="15sp"
+                           android:textColor="@color/black"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="1"
+                           android:padding="5dp"
+                           android:layout_marginLeft="15dp"/>
+                   </TableRow>
+                   <TableRow>
+                       <TextView
+                           android:text="Appropriate Age"
+                           android:textSize="15sp"
+                           android:textColor="@color/black"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:textAlignment="center"
+                           android:gravity="center_horizontal" />
+                       <TextView
+                           android:id="@+id/appropriateAge"
+                           android:textSize="15sp"
+                           android:textColor="@color/black"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="1"
+                           android:padding="5dp"
+                           android:layout_marginLeft="15dp"/>
+                   </TableRow> -->
+                <!-- <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="Date"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/dateAdded"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </TableRow> -->
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="Update date"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/dateUpdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
